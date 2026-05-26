@@ -1,7 +1,7 @@
 
-============================================================
+=======
 Version Information
-============================================================
+=======
 
 Application: DengX
 Version: v1.0.0
@@ -9,9 +9,9 @@ Release type: First public Windows release
 Developer: Dr. David Knut Bengtsson-Asgarali
 Contact: bengtsson.asgarali@gmail.com
 
-============================================================
+=======
 Intro
-============================================================
+=======
 
 Thank you for downloading the DengX application!
 
@@ -21,9 +21,9 @@ First, as this is the first publicly available version, there may be bugs and up
 
 You can contact me at: bengtsson.asgarali@gmail.com
 
-============================================================
+=======
 DengX Application Overview
-============================================================
+=======
 
 The DengX application is a dengue-climate forecasting and analysis tool. It allows disease datasets and climate datasets to be loaded, analyzed, and used for training XGBoost models. The application supports exploratory statistical analysis, model performance evaluation (Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), coefficient of determination (R^2)), SHAP-based model interpretation (beeswarm plot, 2D dependency plots, and detecting discrete climatic thresholds associated with increased dengue transmission). The app supports figure and table exports, to help streamline research workflows.
 
@@ -41,9 +41,9 @@ For use case reference for DengX refer to my current research on the topic, all 
 3. Bengtsson-Asgarali D. Designing Dengue-Climate Nexus Research for Machine Learning Modeling. Zenodo; 2026. doi:10.5281/zenodo.18167625.
 
 
-============================================================
+=======
 Important Notice
-============================================================
+=======
 
 In the article "An Introduction to Building the DengX Framework for Dengue Forecasting" I discuss data and system property conditions for using Predictive Artificial Intelligence: "...the conditions
 necessary for predictive AI to be effective in public health...1) To use Predictive AI, the phenomenon of study should be well understood, as should the forces that drive it...2) Predictive AI requires access to data sufficient in temporal resolution, accuracy, and non-zero dominance (that optimally supports geospatial analysis). 3) Data selection and research design should be informed by a well conducted literature review on the phenomenon in question..." 
@@ -52,9 +52,9 @@ The output of any model depends on the system under study, our understanding of 
 
 Please refer to the original article for full context: Bengtsson-Asgarali D. An Introduction to Building the DengX Framework for Dengue Forecasting. Zenodo; 2026. https://doi.org/10.5281/zenodo.18319078
 
-============================================================
+=======
 Installation Instructions
-============================================================
+=======
 
 1. Extract the ZIP file you downloaded.
 
@@ -78,9 +78,9 @@ Installation Instructions
    This may appear because this is an early Windows release and the application may not yet be code-signed by a recognized publisher.
 
 
-============================================================
+=======
 Input File Requirements
-============================================================
+=======
 
 DengX requires two main files for the primary analysis workflow:
 
@@ -118,9 +118,9 @@ Other x feature variables  include:
 Before loading files, check that:
 
 
-============================================================
+=======
 Basic Workflow
-============================================================
+=======
 
 1. Open DengX.
 
@@ -143,9 +143,9 @@ Basic Workflow
 10. Analyzed data can be viewed across the four tabs and exported by pressing "Export Images" button in the top right.
 
 
-============================================================
+=======
 Piecewise function forecasting Workflow
-============================================================
+=======
 
 DengX supports out-of-sample forecasting. Conceptually, this applies the concept of ambient space and ambient input space to use decision trees of an "old" model on the X feature data of a "new" or "future" time period. For long-term forecasting, this assumes a certain degree of boundedness and ergodicity of the domain and codomain of the system in question. These assumptions are accepted for this research for dengue in particular, due to the non-linear, threshold dependent, climate sensitivity of the dengue transmission system. 
  
@@ -158,9 +158,9 @@ The practical workflow is as follows:
 3. In the same section, press "Add future X file" and load future X file
 4. Press "Apply"
 
-============================================================
+=======
 Main Analysis Outputs
-============================================================
+=======
 
 After running the main analysis, DengX may generate several types of outputs depending on the selected workflow and available data.
 
@@ -179,15 +179,14 @@ These may include:
 - Excel exports containing statistical summaries and analysis tables.
 
 
-============================================================
+=======
 Understanding the XGBoost Model Approaches
-============================================================
 
 DengX uses XGBoost regression models to estimate relationships between dengue outcomes and selected X features. Four different Model Approaches (MA) are used for training and testing. Constant across all were dengue data as the dependent variable. MA1 included only climate variables as X features. MA2 included Dengue_y_lag_1 and climate variables as X features. MA3 replaced X features with a column, in which each cell was a constant value of 1, producing the baseline value. MA4 included only Dengue_y_lag_1 as X features.
 
-============================================================
+=======
 Understanding SHAP Outputs
-============================================================
+=======
 
 SHAP outputs are used to interpret how model features contribute to predicted dengue values.
 
@@ -201,9 +200,9 @@ In general:
 
 These outputs are useful for identifying possible climate conditions associated with increased dengue risk in the trained model.
 
-============================================================
+=======
 Reset Buttons
-============================================================
+=======
 
 DengX includes reset functions to help users run new analyses without restarting the application.
 
